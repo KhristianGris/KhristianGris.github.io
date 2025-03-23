@@ -1,0 +1,63 @@
+// --- Import --- //
+
+
+// --- Colors --- //
+$clr-base: #1D1819;
+
+$clr-primary: #F9B75F;
+$clr-secondary: #F2E8D7;
+$clr-terciary: #614e3c;
+
+$link-normal: #F2E8D7;
+$link-hover: #F9B75F;
+
+$boton-hover: #fbc78308;
+
+// --- Font-Size --- //
+
+
+// --- Typography --- //
+$ff-primary: "Poppins", serif;
+$ff-secondary: "Roboto", serif;
+
+// --- Images --- //
+
+
+// --- Position --- //
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin centerdown {
+  display: flex;
+  justify-content:center;
+  align-items:end;
+}
+
+@mixin right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+@mixin left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+// --- Links --- //
+@mixin clearlink {
+  text-decoration: none;
+  color: $clr-secondary;
+}
+
+// --- Button --- //
+@mixin button {
+    border-color: $clr-primary;
+    
+}
+
+
+

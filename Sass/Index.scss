@@ -1,0 +1,836 @@
+// --- Import --- //
+@import "Variables";
+@import "Normalize";
+@import "Global";
+@import "Animate";
+
+* {
+  transition: 0.2s ease all;
+}
+
+
+//==========  B O D Y  ==========
+
+.body {
+  color: wheat;
+  background-color: $clr-base;
+  max-width: 100%;
+}
+
+
+
+//==========  N A V  ==========
+
+.nav {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-area: nav;
+  width: 100%; height: 5.65rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  background-color: $clr-base;
+
+  &-logo{
+    display: grid;
+    justify-content: right;
+    align-items: center;
+
+    //background-color: rgb(66, 166, 66);
+
+    &-enlace{
+      
+      &-img {
+        height: 1.65rem;
+        margin-top: 0.3rem;
+      }
+    }
+  }
+
+  &-enlaces {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $clr-secondary;
+    font-weight: 400;
+    font-size: clamp(0.3rem, 50vw, 1.05rem);
+
+    //background-color: rgb(166, 148, 66);
+
+    &-enlace {
+      margin-right: 30px;
+      @include clearlink();
+      //font-size: clamp(0.5rem, 50vw, 1.1rem);
+
+      &:hover{
+        color: $clr-primary;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &-agendar {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    //background-color: rgb(66, 144, 166);
+    
+    &-boton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 8rem;
+      height: 3rem;
+      text-align: center;
+      border-radius: clamp(0.1rem, 50vw, 1.1rem);
+      border: 2px solid $clr-primary;
+      font-size: 1.1rem;
+
+      &:hover{
+        background-color: $boton-hover;
+      }
+
+
+      &-link {
+        @include clearlink();
+        color: $clr-primary;
+        font-weight: 600;
+      }
+    }
+  }
+
+
+}
+
+
+
+
+//==========  M A I N  ==========
+
+.main {
+  display: grid;
+  grid-template-rows: 90dvh 95dvh 65dvh;
+  height: auto;
+  overflow-x: hidden; 
+}
+
+
+// I N I C I O
+.inicio{
+  display: grid;
+  grid-template-rows: 25% 55% 15%;
+  
+
+  //background: #e27474;
+
+  &-superior{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    //background: rgba(207, 187, 95, 0.333);
+
+    &-titulo{
+      color: $clr-secondary;
+      font-size: clamp(2.2rem, 8vw, 4.1rem);
+      //font-size: 4rem;
+      text-align: center;
+      
+      &-span{
+        color: $clr-primary;
+      }
+    }
+  }
+
+  &-central{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: clamp(1rem, 3%, 3rem);
+
+    //background: #2d2c2c;
+
+    &-carrusel{
+      
+      &-img{
+        aspect-ratio: 9 / 14;
+        border-radius: 1.1rem;
+
+        &-01{
+          object-fit: cover;
+          object-position: center;
+          width: clamp(13rem, 15vw, 16rem);
+        }
+
+        &-02{
+          object-fit: cover;
+          object-position: center;
+          width: clamp(12rem, 14vw, 15rem);
+        }
+
+        &-03{
+          object-fit: cover;
+          object-position: center;
+          width: clamp(11rem, 13vw, 14rem);
+        }
+
+        &-04{
+          object-fit: cover;
+          object-position: center;
+          width: clamp(12rem, 14vw, 15rem);
+        }
+
+        &-05{
+          object-fit: cover;
+          object-position: center;
+          width: clamp(13rem, 15vw, 16rem);
+        }
+      }
+    }
+  }
+
+  &-inferior{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    //background: rgba(207, 187, 95, 0.333);
+
+    &-boton{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 11rem;
+      height: 4rem;
+      text-align: center;
+      border-radius: clamp(0.1rem, 50vw, 1.1rem);
+      border: 2px solid $clr-secondary;
+      background: #00000000;
+      color: $clr-secondary;
+      font-weight: 600;
+      
+      &:hover{
+        background-color: $boton-hover;
+      }
+
+      &-enlace{
+        @include clearlink();
+        color: $clr-primary;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+
+
+// P R O Y E C T O S
+.proyectos{
+  display: grid;
+  grid-template-rows: 25% 75%;
+
+
+  //background: #e2bb74;
+
+  &-superior{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    //background-color: #54402B;
+
+    &-titulo{
+      width: clamp(15rem, 50vw, 25rem);
+      object-fit: contain;
+    }
+  }
+
+  &-contenido{
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    
+    //background-color: #544242;
+  }
+
+}
+
+// P R O Y E C T O S - C A R R U S E L
+
+.carrusel{
+
+
+  &-img{
+    width: 19rem;
+    height: 33rem;
+    aspect-ratio: 9 / 16;
+    border-radius: 1rem;
+  }
+}
+
+.splide {
+  max-width: 50vw;
+  cursor: pointer;
+  border-radius: 1rem; /* Agrega bordes redondeados al slider */
+
+  &__track {
+    border-radius: 1rem; /* Asegura que el track también tenga bordes redondeados */
+  }
+
+  &__list {
+    border-radius: 1rem; /* Aplica bordes redondeados a la lista */
+  }
+
+  &__title {
+    position: absolute; /* Posiciona el texto de manera absoluta */
+    top: 79%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta el texto al centro exacto */
+    z-index: 10; /* Asegura que el texto esté por encima del video */
+    text-align: center; /* Centra el texto */
+    color: #fff; /* Cambia el color del texto para que sea visible */
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    //background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor visibilidad */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    pointer-events: none; /* Evita que el texto interfiera con la interacción del video */
+    width: 80%;
+
+    & p {
+      line-height: 1px;
+    }
+
+    & span {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: -1px;
+    }
+  }
+
+  &__slide {
+    border-radius: 1rem; /* Bordes redondeados para cada slide */
+
+    &__container {
+      border-radius: 1rem; /* Bordes redondeados para el contenedor del slide */
+
+      &--has-video {
+        border-radius: 1rem; /* Bordes redondeados para los videos */
+        aspect-ratio: 9 / 16;
+        overflow: hidden; /* Asegura que el contenido no sobresalga de los bordes redondeados */
+      }
+    }
+  }
+}
+
+
+
+
+
+// A G E N D A R
+.agendar{
+  display: grid;
+  grid-template-rows: 40% 25% 35%;
+
+  //background: #b6e274;
+
+  &-superior{
+    display: grid;
+    justify-content: center;
+    align-items: end;
+
+    //background: #c3c8bd7b;
+
+    &-titulo{
+      width: clamp(15rem, 50vw, 25rem);
+    }
+
+    //background: #70716f;
+  }
+
+  &-central{
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    padding-top: 1rem;
+
+    
+
+    &-boton{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(10rem, 50vw, 20rem);
+      height: clamp(0.7rem, 50vw, 8.5rem);
+      font-size: clamp(2.3rem, -0.875rem + 8.333333vw, 3rem);
+      text-align: center;
+      border-radius: clamp(0.1rem, 50vw, 1.5rem);
+      border: 2px solid $clr-primary;
+      background: #00000000;
+      color: $clr-primary;
+      font-weight: 700;
+      
+      &:hover{
+        background-color: $boton-hover;
+      }
+
+      &-enlace{
+        @include clearlink();
+        color: $clr-primary;
+      }
+    }
+
+    //background: #c3c8bd37;
+  }
+
+  &-inferior{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    //background: #b3c1a3;
+  }
+}
+
+// C L I E N T - I N F I N I T E  S L I D E R
+
+.splide{
+  width: 100%;
+}
+
+.splide-list{
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Espaciado entre los elementos */
+    width: 100%;
+
+  &-infinite{
+    
+  
+    &-client{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(9rem, 30vw, 12rem);
+      height: clamp(4rem, 30vw, 4.5rem);
+      font-size: clamp(1.2rem, 30vw, 1.9rem);;
+      font-weight: 600;
+      text-align: center;
+      border-radius: clamp(0.1rem, 50vw, 0.5rem);
+      border: 2px solid $clr-terciary;
+      color: $clr-terciary;
+      cursor: pointer;
+
+      &:hover{
+        background-color: $boton-hover;
+      }
+    }
+  }
+}
+
+
+
+//==========  F O O T E R  ==========
+
+.footer {
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  align-items: center;
+  justify-content: center;
+
+  border-top: .5px solid rgba($color: #54402B, $alpha: 0.4);
+  width: 100%; height: 7rem;
+
+    &-izquierda{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      
+      //background-color: #84b47c41;
+  
+      &-red{
+        width: clamp(2rem, 8vw, 3.5rem);
+        height: clamp(2rem, 8vw, 3.5rem);
+        border: 1px solid rgba($color: $clr-primary, $alpha: 0.4);
+        border-radius: clamp(.3rem, 8vw, 0.625rem);
+        @include center();
+  
+        &:hover{
+          background-color: $boton-hover;
+        }
+  
+        & i{
+          font-size: clamp(1.1rem, 3vw, 1.5rem);
+        }
+        
+        &-link{
+          @include clearlink();
+          color: $clr-primary;
+          margin-right: clamp(.1rem, 3vw, 1.8rem);
+          
+        }
+      }
+    }
+  
+    &-center{
+
+
+      //background-color: #b4a07c41;
+    }
+
+    &-derecha{
+      display: flex;
+      justify-content: center;
+
+      //background-color: #bf9b5941;
+      
+      &-logo{
+        width: clamp(8rem, 25vw, 12rem);
+        
+        
+        &-link{
+        
+        }
+      }
+    }
+
+} // FIN FOOTER
+
+
+
+//==========  M E D I A  Q U E R Y S  ==========
+
+@media (max-width: 1200px) {
+  
+  .main{
+    //background-color: #6986e5;
+    color: white;
+  }
+
+  .inicio-central-carrusel-img{
+   
+
+    &-01{
+      display: none;
+    }
+
+    &-02{
+      width: clamp(7rem, 30%, 14rem);
+    }
+
+    &-03{
+      width: clamp(8rem, 35%, 15rem);
+    }
+
+    &-04{
+      width: clamp(7rem, 30%, 14rem);
+    }
+
+    &-05{
+      display: none;
+    }
+  }
+  
+}
+
+@media (max-width: 850px) {
+
+  .main{
+    //background-color: #e482e4;
+    color: white;
+  }
+
+  .inicio{
+    
+
+    &-superior{
+    
+    }
+
+    &-central{
+    
+    }
+
+    &-inferior{
+    
+    }
+  }
+
+  
+  .nav{
+    display: grid;
+    grid-template-columns: 35% clamp(17%, 15vw, 30%) 35%;
+    justify-content: space-around;
+    height: 5rem;
+
+    &-enlaces{
+      
+      &-enlace{
+        display: none;
+      }
+    
+    }
+  }
+  
+  .inicio-central-carrusel-img{
+
+    &-01{
+      display: none;
+    }
+
+    &-02{
+      width: clamp(7rem, 30%, 14rem);
+      margin-left: 5%;
+    }
+
+    &-03{
+      width: clamp(8rem, 35%, 15rem);
+    }
+
+    &-04{
+      width: clamp(7rem, 30%, 14rem);
+      margin-right: 5%;
+    }
+
+    &-05{
+      display: none;
+    }
+  }
+
+
+  .footer{
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    &-izquierda{}
+
+    &-center{
+      display: none;
+    }
+
+    &-derecha{
+      display: flex;
+      justify-content: left;
+    }
+  
+  }
+  
+}
+
+@media (max-width: 768px) {
+
+  #main-slider {
+    width: 76%; /* Reduce el ancho en un 20% */
+    width: 95%; /* Asegura que el slider ocupe todo el ancho disponible */
+    height: auto; /* Ajusta automáticamente el alto */
+    max-width: 90vw; /* Limita el ancho máximo al 100% del ancho de la pantalla */
+    max-height: 90vh; /* Limita el alto máximo al 100% de la altura de la pantalla */
+    //overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+    object-fit: cover; /* Ajusta el contenido para que no se deforme */
+  }
+
+  .proyectos-contenido {
+  .splide__slide {
+    flex: 0 0 100%; /* Cada slide ocupa el 100% del ancho disponible */
+    max-width: 100%; /* Asegura que no desborde horizontalmente */
+    max-height: 100vh; /* Limita la altura máxima del slide */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+    object-fit: contain; /* Ajusta el contenido para que no se deforme */
+  }
+    max-height: 70vh; /* Limita la altura máxima del slide */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+  }
+
+  .splide__title {
+
+    /* Centrar el texto dentro del slider */
+
+    display: flex; /* Usar flexbox para centrar */
+    flex-direction: column; /* Asegura que los elementos internos estén en columna */
+    justify-content: flex-end; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Alinea el texto al centro */
+    height: 20%; /* Asegura que ocupe todo el espacio disponible */
+
+    padding: 2px; /* Espaciado interno opcional */
+    font-size: 12px; /* Ajusta el tamaño del texto */
+    margin-top: 5rem;
+
+    &-span{
+      margin-top: 5rem;
+      font-size: 12px;
+    }
+  }
+
+  .carrusel-img {
+    max-width: 100%; /* Asegura que las imágenes sean responsivas */
+    height: auto;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 650px){
+
+  .nav{
+    display: grid;
+    grid-template-columns: 35% clamp(1%, 10vw, 10%) 35%;
+
+    &-enlaces{
+      
+      &-enlace{
+        display: none;
+      }
+    
+    }
+  }
+
+  .main{
+    display: grid;
+    grid-template-rows: 85dvh 75dvh 80dvh; 
+    color: white;
+
+    //background-color: #82c2ef;
+    
+  }
+  
+
+  .inicio{
+    display: grid;
+    grid-template-rows: 40% 20% 40%;
+    
+
+    &-superior{
+    
+    }
+
+    &-central{
+    
+    }
+
+    &-inferior{
+    
+    }
+  }
+
+}
+
+
+@media (max-width: 480px){
+
+  .nav{
+    display: grid;
+    grid-template-columns: 35% 0% 35%;
+
+    &-logo{
+      
+      &-enlace{
+
+        &-img{
+          height: 1.6rem;
+          margin-top: 0.3rem;
+        }
+      }
+    }
+
+    &-enlaces{
+      
+      &-enlace{
+        display: none;
+      }
+    
+    }
+
+    &-agendar{
+    
+      &-boton{
+        width: 7.3rem;
+        height: 2.9rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .main{
+    //background-color: #efdf82;
+    
+  }
+
+  .inicio{
+    
+    &-superior{
+      
+      &-titulo{
+      
+      }
+
+
+      &-span{
+        
+      }
+    }
+
+
+  }
+
+
+  .splide{
+    &__track{}
+
+    &__list{}
+
+    &__title{ }
+
+    &__slide{
+
+      &__container{
+      
+
+        &--has-video{
+
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
+// /* Aplica estilos a los controles del reproductor de video */
+// video::-webkit-media-controls {
+//   opacity: 0.3; /* Reduce la opacidad al 50% */
+//   transition: opacity 0.3s ease; /* Agrega una transición suave */
+// }
+
+// /* Restaura la opacidad al pasar el cursor sobre el video */
+// video:hover::-webkit-media-controls {
+//   opacity: 0.3; /* Restaura la opacidad al 100% */
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// CONTROLES DE VIDEO

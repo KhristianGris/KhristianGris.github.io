@@ -1,0 +1,44 @@
+// --- Fonts --- //
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// --- Import --- //
+@import "Variables";
+
+
+* {
+    font-family: $ff-primary;
+  }
+  
+  *::selection {
+    background-color: rgba(92, 92, 92, 0.2);
+  }
+  
+  *::-moz-selection {
+    background-color: rgba(92, 92, 92, 0.2);
+  }
+  
+  *::-moz-scrollbar {
+    width: 0.5rem;
+    background: #595959;
+  }
+  
+  *::-moz-scrollbar-thumb {
+    background: #262626;
+    border-radius: 30px;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 0.5rem;
+    background: #595959;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: $clr-primary;
+    border-radius: 30px;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
