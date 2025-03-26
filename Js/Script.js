@@ -125,6 +125,10 @@ document.addEventListener('DOMContentLoaded', function () {
 //   mainSlider.appendChild(volumeContainer);
 // });
 
+
+
+
+
 // LOADER MINIMALISTA
 document.addEventListener('DOMContentLoaded', function () {
   // Crear el contenedor del loader
@@ -200,5 +204,5 @@ document.addEventListener('DOMContentLoaded', function () {
     loaderContainer.style.opacity = '0';
     loaderContainer.style.transition = 'opacity 0.5s';
     setTimeout(() => loaderContainer.remove(), 500);
-  }, 3000);
+  }, 2000);
 });
