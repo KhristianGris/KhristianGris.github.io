@@ -15,28 +15,23 @@ document.addEventListener('DOMContentLoaded', function () {
     video: { 
       loop         : true,
       mute         : false,
-      controls     : false,
-      volume: "0.5",
+      controls     : false, // Controles desactivados
+      volume: "0.7",
       autoplay: false,
     },
 
     playerOptions: {
-      youtube: {},
-      vimeo: {},
-      htmlVideo: {},
+      youtube: { controls: 0 }, // Desactiva controles en YouTube
+      vimeo: { controls: false }, // Desactiva controles en Vimeo
+      htmlVideo: {}, // Controles ya desactivados en video HTML
     },
 
     breakpoints: {
       768: {
-        perPage: 1, // Muestra 1 slide por página en pantallas pequeñas
-        gap: '10px', // Espaciado entre slides
+      perPage: 1, // Muestra 1 slide por página en pantallas pequeñas
+      gap: '10px', // Espaciado entre slides
       },
     },
-
-
-
-
-
   }).mount(window.splide.Extensions);
 });
 
@@ -48,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     perMove: 1,
     pagination: false,
     arrows: false,
-    drag: true, // Permite arrastrar en dispositivos táctiles
+    drag: false, // Permite arrastrar en dispositivos táctiles
     gap: '50px', // Espaciado entre slides ajustado para evitar amontonamiento
     autoScroll: {
       speed: 30, // Velocidad del desplazamiento automático
