@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // LOADER MINIMALISTA
 document.addEventListener('DOMContentLoaded', function () {
   // Crear el contenedor del loader
-  const loaderContainer = document.createElement('div');
+  const loaderContainer = document.createElement('div');  
   loaderContainer.id = 'loader-container';
   loaderContainer.style.position = 'fixed';
   loaderContainer.style.top = '0';
@@ -152,10 +152,10 @@ document.addEventListener('DOMContentLoaded', function () {
   for (let i = 0; i < 12; i++) {
     const dot = document.createElement('div');
     dot.style.position = 'absolute';
-    dot.style.width = '10px';
-    dot.style.height = '10px';
+    dot.style.width = '9px';
+    dot.style.height = '9px';
     dot.style.backgroundColor = '#F9B75F';
-    dot.style.borderRadius = '50%';
+    dot.style.borderRadius = '10%';
     dot.style.animation = `dot-spin 1.2s linear infinite`;
     dot.style.animationDelay = `${i * 0.1}s`;
 
