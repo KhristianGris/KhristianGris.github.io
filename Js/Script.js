@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
       loop         : true,
       mute         : false,
       controls     : false, // Controles desactivados
-      volume: "0.7",
+      volume: "0.75",
       autoplay: false,
     },
 
