@@ -124,3 +124,81 @@ document.addEventListener('DOMContentLoaded', function () {
 //   mainSlider.style.position = 'relative'; // Asegura que el contenedor se posicione correctamente
 //   mainSlider.appendChild(volumeContainer);
 // });
+
+// LOADER MINIMALISTA
+document.addEventListener('DOMContentLoaded', function () {
+  // Crear el contenedor del loader
+  const loaderContainer = document.createElement('div');
+  loaderContainer.id = 'loader-container';
+  loaderContainer.style.position = 'fixed';
+  loaderContainer.style.top = '0';
+  loaderContainer.style.left = '0';
+  loaderContainer.style.width = '100%';
+  loaderContainer.style.height = '100%';
+  loaderContainer.style.backgroundColor = '#1D1819';
+  loaderContainer.style.display = 'flex';
+  loaderContainer.style.flexDirection = 'column';
+  loaderContainer.style.justifyContent = 'center';
+  loaderContainer.style.alignItems = 'center';
+  loaderContainer.style.zIndex = '9999';
+
+  // Crear el contenedor del círculo de carga
+  const loader = document.createElement('div');
+  loader.style.position = 'relative';
+  loader.style.width = '80px';
+  loader.style.height = '80px';
+
+  // Crear los puntos del círculo
+  for (let i = 0; i < 12; i++) {
+    const dot = document.createElement('div');
+    dot.style.position = 'absolute';
+    dot.style.width = '10px';
+    dot.style.height = '10px';
+    dot.style.backgroundColor = '#F9B75F';
+    dot.style.borderRadius = '50%';
+    dot.style.animation = `dot-spin 1.2s linear infinite`;
+    dot.style.animationDelay = `${i * 0.1}s`;
+
+    // Posicionar los puntos en círculo
+    const angle = (i * 30) * (Math.PI / 180); // Convertir a radianes
+    const x = 35 + 30 * Math.cos(angle); // Ajustar posición X
+    const y = 35 + 30 * Math.sin(angle); // Ajustar posición Y
+    dot.style.left = `${x}px`;
+    dot.style.top = `${y}px`;
+
+    loader.appendChild(dot);
+  }
+
+  // Crear el texto "cargando"
+  const loadingText = document.createElement('p');
+  loadingText.textContent = 'Cargando...';
+  loadingText.style.marginTop = '20px';
+  loadingText.style.fontFamily = 'inherit'; // Usa la fuente principal de la página
+  loadingText.style.fontSize = '17px';
+  loadingText.style.color = '#F2E8D7';
+
+  // Estilo para la animación de los puntos
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes dot-spin {
+      0%, 20% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(0.5); opacity: 0.5; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // Agregar el círculo de carga y el texto al contenedor
+  loaderContainer.appendChild(loader);
+  loaderContainer.appendChild(loadingText);
+
+  // Agregar el contenedor al body
+  document.body.appendChild(loaderContainer);
+
+  // Eliminar el loader después de 5 segundos
+  setTimeout(() => {
+    loaderContainer.style.opacity = '0';
+    loaderContainer.style.transition = 'opacity 0.5s';
+    setTimeout(() => loaderContainer.remove(), 500);
+  }, 3000);
+});
