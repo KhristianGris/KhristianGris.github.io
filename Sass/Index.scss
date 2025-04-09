@@ -304,7 +304,7 @@
     text-align: center;
     border-radius: 1rem; /* Bordes redondeados para cada slide */
     transition: transform 0.3s ease, width 0.3s ease;
-    opacity: 0.5;
+    //opacity: 0.5;
     //pointer-events: none;
 
     &.is-active {
