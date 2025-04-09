@@ -2428,9 +2428,6 @@ html {
   width: clamp(8rem, 25vw, 12rem);
 }
 @media (max-width: 1600px) {
-  .main {
-    background-color: #ef82af;
-  }
   .carrusel-img {
     width: 16rem;
     height: auto;
@@ -2439,9 +2436,6 @@ html {
   }
 }
 @media (max-width: 1450px) {
-  .main {
-    background-color: #a882ef;
-  }
   .carrusel-img {
     width: 15rem;
     height: auto;
@@ -2450,10 +2444,6 @@ html {
   }
 }
 @media (max-width: 1300px) {
-  .main {
-    background-color: #6986e5;
-    color: white;
-  }
   .carrusel-img {
     width: 14rem;
     height: auto;
@@ -2477,10 +2467,6 @@ html {
   }
 }
 @media (max-width: 850px) {
-  .main {
-    background-color: #e482e4;
-    color: white;
-  }
   .nav {
     display: grid;
     grid-template-columns: 35% clamp(17%, 15vw, 30%) 35%;
@@ -2526,9 +2512,6 @@ html {
   }
 }
 @media (max-width: 768px) {
-  .main {
-    background-color: #82d2ef;
-  }
   .carrusel-img {
     width: 15rem;
     height: auto;
@@ -2569,9 +2552,6 @@ html {
   }
 }
 @media (max-width: 650px) {
-  .main {
-    background-color: #e4d582;
-  }
   .nav {
     display: grid;
     grid-template-columns: 35% clamp(1%, 10vw, 10%) 35%;
