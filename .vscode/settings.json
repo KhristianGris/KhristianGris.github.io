@@ -1,0 +1,11 @@
+{
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingComments": "always",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.language.colorizedBracketPairs": [
+        
+    []
+    ],
+    "window.autoDetectColorScheme": false,
+    "editor.bracketPairColorization.enabled": true
+}

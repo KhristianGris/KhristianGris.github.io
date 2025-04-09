@@ -8,7 +8,6 @@
   transition: 0.2s ease all;
 }
 
-
 //==========  B O D Y  ==========
 
 .body {
@@ -17,30 +16,28 @@
   max-width: 100%;
 }
 
-
-
 //==========  N A V  ==========
 
 .nav {
   display: grid;
   grid-template-columns: 25% 50% 25%;
   grid-area: nav;
-  width: 100%; height: 5.65rem;
+  width: 100%;
+  height: 5.65rem;
   position: sticky;
   top: 0;
   z-index: 50;
 
   background-color: $clr-base;
 
-  &-logo{
+  &-logo {
     display: grid;
     justify-content: right;
     align-items: center;
 
     //background-color: rgb(66, 166, 66);
 
-    &-enlace{
-      
+    &-enlace {
       &-img {
         height: 1.65rem;
         margin-top: 0.3rem;
@@ -63,7 +60,7 @@
       @include clearlink();
       //font-size: clamp(0.5rem, 50vw, 1.1rem);
 
-      &:hover{
+      &:hover {
         color: $clr-primary;
         font-weight: 500;
       }
@@ -76,7 +73,7 @@
     justify-content: left;
 
     //background-color: rgb(66, 144, 166);
-    
+
     &-boton {
       display: flex;
       align-items: center;
@@ -88,10 +85,9 @@
       border: 2px solid $clr-primary;
       font-size: 1.1rem;
 
-      &:hover{
+      &:hover {
         background-color: $boton-hover;
       }
-
 
       &-link {
         @include clearlink();
@@ -100,12 +96,7 @@
       }
     }
   }
-
-
 }
-
-
-
 
 //==========  M A I N  ==========
 
@@ -113,38 +104,36 @@
   display: grid;
   grid-template-rows: 90dvh 95dvh 65dvh;
   height: auto;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
-
 // I N I C I O
-.inicio{
+.inicio {
   display: grid;
   grid-template-rows: 25% 55% 15%;
-  
 
   //background: #e27474;
 
-  &-superior{
+  &-superior {
     display: grid;
     justify-content: center;
     align-items: center;
 
     //background: rgba(207, 187, 95, 0.333);
 
-    &-titulo{
+    &-titulo {
       color: $clr-secondary;
       font-size: clamp(2.2rem, 8vw, 4.1rem);
       //font-size: 4rem;
       text-align: center;
-      
-      &-span{
+
+      &-span {
         color: $clr-primary;
       }
     }
   }
 
-  &-central{
+  &-central {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,37 +142,36 @@
 
     //background: #2d2c2c;
 
-    &-carrusel{
-      
-      &-img{
+    &-carrusel {
+      &-img {
         aspect-ratio: 9 / 14;
         border-radius: 1.1rem;
 
-        &-01{
+        &-01 {
           object-fit: cover;
           object-position: center;
           width: clamp(13rem, 15vw, 16rem);
         }
 
-        &-02{
+        &-02 {
           object-fit: cover;
           object-position: center;
           width: clamp(12rem, 14vw, 15rem);
         }
 
-        &-03{
+        &-03 {
           object-fit: cover;
           object-position: center;
           width: clamp(11rem, 13vw, 14rem);
         }
 
-        &-04{
+        &-04 {
           object-fit: cover;
           object-position: center;
           width: clamp(12rem, 14vw, 15rem);
         }
 
-        &-05{
+        &-05 {
           object-fit: cover;
           object-position: center;
           width: clamp(13rem, 15vw, 16rem);
@@ -192,14 +180,14 @@
     }
   }
 
-  &-inferior{
+  &-inferior {
     display: grid;
     justify-content: center;
     align-items: center;
 
     //background: rgba(207, 187, 95, 0.333);
 
-    &-boton{
+    &-boton {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -211,12 +199,12 @@
       background: #00000000;
       color: $clr-secondary;
       font-weight: 600;
-      
-      &:hover{
+
+      &:hover {
         background-color: $boton-hover;
       }
 
-      &-enlace{
+      &-enlace {
         @include clearlink();
         color: $clr-primary;
         font-size: 1.5rem;
@@ -225,66 +213,65 @@
   }
 }
 
-
-
 // P R O Y E C T O S
-.proyectos{
+.proyectos {
   display: grid;
   grid-template-rows: 25% 75%;
 
-
   //background: #e2bb74;
 
-  &-superior{
+  &-superior {
     display: grid;
     justify-content: center;
     align-items: center;
 
     //background-color: #54402B;
 
-    &-titulo{
+    &-titulo {
       width: clamp(15rem, 50vw, 25rem);
       object-fit: contain;
     }
   }
 
-  &-contenido{
+  &-contenido {
     display: grid;
     justify-content: center;
     align-items: start;
-    
+
     //background-color: #544242;
   }
-
 }
 
 // P R O Y E C T O S - C A R R U S E L
 
-.carrusel{
-
-
-  &-img{
-    width: 19rem;
-    height: 33rem;
+.carrusel {
+  &-img {
+    width: 17rem;
+    height: auto;
     aspect-ratio: 9 / 16;
-    border-radius: 1rem;
+    border-radius: 0.7rem;
   }
 }
 
-.splide {
-  max-width: 50vw;
+.principal-slider {
+  max-width: 55vw;
   cursor: pointer;
   border-radius: 1rem; /* Agrega bordes redondeados al slider */
-
-  &__track {
+  margin: 0 auto; /* Centra el slider */
+  object-fit: cover; /* Ajusta el contenido para que no se deforme */
+  transition: transform 0.3s ease, width 0.3s ease, translate 0.3s ease; /* Agrega una transición suave al hover */
+  
+  &-track {
     border-radius: 1rem; /* Asegura que el track también tenga bordes redondeados */
+    
   }
 
-  &__list {
+  &-list {
     border-radius: 1rem; /* Aplica bordes redondeados a la lista */
+   
   }
 
-  &__title {
+  &-title {
     position: absolute; /* Posiciona el texto de manera absoluta */
     top: 79%; /* Centra verticalmente */
     left: 50%; /* Centra horizontalmente */
@@ -310,55 +297,72 @@
     }
   }
 
-  &__slide {
+  &-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     border-radius: 1rem; /* Bordes redondeados para cada slide */
+    transition: transform 0.3s ease, width 0.3s ease;
+    opacity: 0.5;
+    //pointer-events: none;
 
-    &__container {
+    &.is-active {
+      //transform: scale(1.1); /* Aumenta el tamaño del slide activo */
+      z-index: 100; /* Asegura que el slide activo esté por encima del resto */
+      opacity: 1;
+      transition: opacity 0.3s ease, width 0.3s ease;
+      //pointer-events: all;
+      cursor: pointer;
+    }
+
+    &-container {
       border-radius: 1rem; /* Bordes redondeados para el contenedor del slide */
-
+      
       &--has-video {
         border-radius: 1rem; /* Bordes redondeados para los videos */
         aspect-ratio: 9 / 16;
         overflow: hidden; /* Asegura que el contenido no sobresalga de los bordes redondeados */
+        
+        & video {
+          width: 100%; /* Asegura que el video ocupe todo el ancho del contenedor */
+          height: auto; /* Ajusta automáticamente el alto */
+          object-fit: cover; /* Ajusta el contenido para que no se deforme */
+          
+        }
       }
     }
   }
 }
 
-
-
-
-
 // A G E N D A R
-.agendar{
+.agendar {
   display: grid;
   grid-template-rows: 40% 25% 35%;
 
   //background: #b6e274;
 
-  &-superior{
+  &-superior {
     display: grid;
     justify-content: center;
     align-items: end;
 
     //background: #c3c8bd7b;
 
-    &-titulo{
+    &-titulo {
       width: clamp(15rem, 50vw, 25rem);
     }
 
     //background: #70716f;
   }
 
-  &-central{
+  &-central {
     display: grid;
     justify-content: center;
     align-items: start;
     padding-top: 1rem;
 
-    
-
-    &-boton{
+    &-boton {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -371,12 +375,12 @@
       background: #00000000;
       color: $clr-primary;
       font-weight: 700;
-      
-      &:hover{
+
+      &:hover {
         background-color: $boton-hover;
       }
 
-      &-enlace{
+      &-enlace {
         @include clearlink();
         color: $clr-primary;
       }
@@ -385,53 +389,110 @@
     //background: #c3c8bd37;
   }
 
-  &-inferior{
+  &-inferior {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
+
     //background: #b3c1a3;
   }
 }
 
 // C L I E N T - I N F I N I T E  S L I D E R
 
-.splide{
-  width: 100%;
-}
+// .infinite-slider {
+//   max-width: 65vw;
+//   cursor: pointer;
+//   pointer-events: none;
 
-.splide-list{
+//   // Removed empty ruleset for &-track
+//   &-track {
+//     border-radius: 1rem; /* Asegura que el track también tenga bordes redondeados */
+
+//   }
+
+//   &-list {
+//     display: flex;
+//     flex-direction: row;
+//     gap: 10px; /* Espaciado entre los elementos */
+//     width: 100%;
+
+
+//     &-client {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       width: clamp(9rem, 30vw, 12rem);
+//       height: clamp(4rem, 30vw, 4.5rem);
+//       font-size: clamp(1.2rem, 30vw, 1.9rem);
+//       font-weight: 600;
+//       text-align: center;
+//       border-radius: clamp(0.1rem, 50vw, 0.5rem);
+//       border: 2px solid $clr-terciary;
+//       color: $clr-terciary;
+//       cursor: pointer;
+
+//       &:hover {
+//         background-color: $boton-hover;
+//       }
+//     }
+//   }
+// }
+
+// C L I E N T  S L I D E R  -  C S S
+
+.client-slider{
+  width: 75vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+
+  &-track{
     display: flex;
-    flex-direction: row;
-    gap: 10px; /* Espaciado entre los elementos */
-    width: 100%;
+    animation: scroll 25s linear infinite;
+    -webkit-animation: scroll 25s linear infinite;
+    width: calc(150px * 27);
 
-  &-infinite{
-    
-  
-    &-client{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: clamp(9rem, 30vw, 12rem);
-      height: clamp(4rem, 30vw, 4.5rem);
-      font-size: clamp(1.2rem, 30vw, 1.9rem);;
+    &-slide{
+      width: 150px;
+      height: auto;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+      //background-color: #524d4d;
+      margin-right: 2em;
+      font-size: 1.7em;
       font-weight: 600;
-      text-align: center;
+      color: $clr-terciary;
       border-radius: clamp(0.1rem, 50vw, 0.5rem);
       border: 2px solid $clr-terciary;
-      color: $clr-terciary;
       cursor: pointer;
+      pointer-events: none;
+     
+      
+      &-client{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-      &:hover{
-        background-color: $boton-hover;
+        & span{
+          color: $clr-base;
+        }
       }
     }
   }
 }
 
-
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-150px * 27));
+    transform: translateX(calc(-150px * 27));
+  }
+}
 
 //==========  F O O T E R  ==========
 
@@ -441,315 +502,374 @@
   align-items: center;
   justify-content: center;
 
-  border-top: .5px solid rgba($color: #54402B, $alpha: 0.4);
-  width: 100%; height: 7rem;
+  border-top: 0.5px solid rgba($color: #54402b, $alpha: 0.4);
+  width: 100%;
+  height: 7rem;
 
-    &-izquierda{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      
-      //background-color: #84b47c41;
-  
-      &-red{
-        width: clamp(2rem, 8vw, 3.5rem);
-        height: clamp(2rem, 8vw, 3.5rem);
-        border: 1px solid rgba($color: $clr-primary, $alpha: 0.4);
-        border-radius: clamp(.3rem, 8vw, 0.625rem);
-        @include center();
-  
-        &:hover{
-          background-color: $boton-hover;
-        }
-  
-        & i{
-          font-size: clamp(1.1rem, 3vw, 1.5rem);
-        }
-        
-        &-link{
-          @include clearlink();
-          color: $clr-primary;
-          margin-right: clamp(.1rem, 3vw, 1.8rem);
-          
-        }
+  &-izquierda {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    //background-color: #84b47c41;
+
+    &-red {
+      width: clamp(2rem, 8vw, 3.5rem);
+      height: clamp(2rem, 8vw, 3.5rem);
+      border: 1px solid rgba($color: $clr-primary, $alpha: 0.4);
+      border-radius: clamp(0.3rem, 8vw, 0.625rem);
+      @include center();
+
+      &:hover {
+        background-color: $boton-hover;
+      }
+
+      & i {
+        font-size: clamp(1.1rem, 3vw, 1.5rem);
+      }
+
+      &-link {
+        @include clearlink();
+        color: $clr-primary;
+        margin-right: clamp(0.1rem, 3vw, 1.8rem);
       }
     }
-  
-    &-center{
+  }
 
+  &-center {
+    //background-color: #b4a07c41;
+  }
 
-      //background-color: #b4a07c41;
-    }
+  &-derecha {
+    display: flex;
+    justify-content: center;
 
-    &-derecha{
-      display: flex;
-      justify-content: center;
+    //background-color: #bf9b5941;
 
-      //background-color: #bf9b5941;
-      
-      &-logo{
-        width: clamp(8rem, 25vw, 12rem);
-        
-        
-        &-link{
-        
-        }
+    &-logo {
+      width: clamp(8rem, 25vw, 12rem);
+
+      &-link {
       }
     }
-
+  }
 } // FIN FOOTER
-
-
 
 //==========  M E D I A  Q U E R Y S  ==========
 
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
+
+  .main {
+    background-color: #ef82af;
+  }
   
-  .main{
-    //background-color: #6986e5;
+  .carrusel {
+    &-img {
+      width: 16rem;
+      height: auto;
+      aspect-ratio: 9 / 16;
+      border-radius: 1rem;
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+
+  .main {
+    background-color: #a882ef;
+  }
+  
+  .carrusel {
+    &-img {
+      width: 15rem;
+      height: auto;
+      aspect-ratio: 9 / 16;
+      border-radius: 1rem;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .main {
+    background-color: #6986e5;
     color: white;
   }
 
-  .inicio-central-carrusel-img{
-   
+  .carrusel {
+    &-img {
+      width: 14rem;
+      height: auto;
+      aspect-ratio: 9 / 16;
+      border-radius: 1rem;
+    }
+  }
 
-    &-01{
+  .inicio-central-carrusel-img {
+    &-01 {
       display: none;
     }
 
-    &-02{
+    &-02 {
       width: clamp(7rem, 30%, 14rem);
     }
 
-    &-03{
+    &-03 {
       width: clamp(8rem, 35%, 15rem);
     }
 
-    &-04{
+    &-04 {
       width: clamp(7rem, 30%, 14rem);
     }
 
-    &-05{
+    &-05 {
       display: none;
     }
   }
-  
 }
 
 @media (max-width: 850px) {
-
-  .main{
-    //background-color: #e482e4;
+  .main {
+    background-color: #e482e4;
     color: white;
   }
 
-  .inicio{
-    
-
-    &-superior{
-    
+  .inicio {
+    &-superior {
     }
 
-    &-central{
-    
+    &-central {
     }
 
-    &-inferior{
-    
+    &-inferior {
     }
   }
 
-  
-  .nav{
+  .nav {
     display: grid;
     grid-template-columns: 35% clamp(17%, 15vw, 30%) 35%;
     justify-content: space-around;
     height: 5rem;
 
-    &-enlaces{
-      
-      &-enlace{
+    &-enlaces {
+      &-enlace {
         display: none;
       }
-    
     }
   }
-  
-  .inicio-central-carrusel-img{
 
-    &-01{
+
+  .carrusel {
+    &-img {
+      width: 16rem;
+      height: auto;
+      aspect-ratio: 9 / 16;
+      border-radius: 1rem;
+    }
+  }
+
+
+  .inicio-central-carrusel-img {
+    &-01 {
       display: none;
     }
 
-    &-02{
+    &-02 {
       width: clamp(7rem, 30%, 14rem);
       margin-left: 5%;
     }
 
-    &-03{
+    &-03 {
       width: clamp(8rem, 35%, 15rem);
     }
 
-    &-04{
+    &-04 {
       width: clamp(7rem, 30%, 14rem);
       margin-right: 5%;
     }
 
-    &-05{
+    &-05 {
       display: none;
     }
   }
 
-
-  .footer{
+  .footer {
     display: grid;
     grid-template-columns: 60% 40%;
 
-    &-izquierda{}
+    &-izquierda {
+    }
 
-    &-center{
+    &-center {
       display: none;
     }
 
-    &-derecha{
+    &-derecha {
       display: flex;
       justify-content: left;
     }
-  
   }
-  
 }
 
 @media (max-width: 768px) {
 
-  #main-slider {
-    width: 76%; /* Reduce el ancho en un 20% */
-    width: 95%; /* Asegura que el slider ocupe todo el ancho disponible */
-    height: auto; /* Ajusta automáticamente el alto */
-    max-width: 90vw; /* Limita el ancho máximo al 100% del ancho de la pantalla */
-    max-height: 90vh; /* Limita el alto máximo al 100% de la altura de la pantalla */
-    //overflow: hidden; /* Oculta cualquier contenido que sobresalga */
-    object-fit: cover; /* Ajusta el contenido para que no se deforme */
+  .main {
+    background-color: #82d2ef;
   }
 
-  .proyectos-contenido {
-  .splide__slide {
-    flex: 0 0 100%; /* Cada slide ocupa el 100% del ancho disponible */
-    max-width: 100%; /* Asegura que no desborde horizontalmente */
-    max-height: 100vh; /* Limita la altura máxima del slide */
-    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
-    object-fit: contain; /* Ajusta el contenido para que no se deforme */
+  .carrusel {
+    &-img {
+      width: 15rem;
+      height: auto;
+      aspect-ratio: 9 / 16;
+      border-radius: 1rem;
+    }
   }
-    max-height: 70vh; /* Limita la altura máxima del slide */
-    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
-  }
+  
+  .client-slider {
+    width: 85vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 4rem;
 
-  .splide__title {
+    &-track {
+      display: flex;
+      animation: scroll 40s linear infinite;
+      -webkit-animation: scroll 40s linear infinite;
+      width: calc(150px * 27);
 
-    /* Centrar el texto dentro del slider */
+      &-slide {
+        width: 100px;
+        height: auto;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        margin-right: 1.3em;
+        font-size: 1.5em;
+        font-weight: 600;
+        color: $clr-terciary;
+        border-radius: clamp(0.1rem, 50vw, 0.5rem);
+        border: 2px solid $clr-terciary;
+        cursor: pointer;
 
-    display: flex; /* Usar flexbox para centrar */
-    flex-direction: column; /* Asegura que los elementos internos estén en columna */
-    justify-content: flex-end; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Alinea el texto al centro */
-    height: 20%; /* Asegura que ocupe todo el espacio disponible */
-
-    padding: 2px; /* Espaciado interno opcional */
-    font-size: 12px; /* Ajusta el tamaño del texto */
-    margin-top: 5rem;
-
-    &-span{
-      margin-top: 5rem;
-      font-size: 12px;
+        &-client {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
     }
   }
 
-  .carrusel-img {
-    max-width: 100%; /* Asegura que las imágenes sean responsivas */
-    height: auto;
+    
+  // SLIDER VERTICAL COMENTADO
+  // #main-slider {
+  //   width: 80%; /* Reduce el ancho en un 20% */
+  //   height: auto; /* Ajusta automáticamente el alto */
+  //   max-width: 90vw; /* Limita el ancho máximo al 100% del ancho de la pantalla */
+  //   max-height: 90vh; /* Limita el alto máximo al 100% de la altura de la pantalla */
+  //   //overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+  //   object-fit: cover; /* Ajusta el contenido para que no se deforme */
+  //   margin: 0 auto; /* Centra el slider horizontalmente */
+  // }
+
+  // .proyectos-contenido {
+  // .splide__slide {
+  //   flex: 0 0 100%; /* Cada slide ocupa el 100% del ancho disponible */
+  //   max-width: 100%; /* Asegura que no desborde horizontalmente */
+  //   max-height: 100vh; /* Limita la altura máxima del slide */
+  //   overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+  //   object-fit: contain; /* Ajusta el contenido para que no se deforme */
+  // }
+  //   max-height: 70vh; /* Limita la altura máxima del slide */
+  //   overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+  // }
+
+  // .splide__title {
+
+  //   /* Centrar el texto dentro del slider */
+
+  //   display: flex; /* Usar flexbox para centrar */
+  //   flex-direction: column; /* Asegura que los elementos internos estén en columna */
+  //   justify-content: flex-end; /* Centra verticalmente */
+  //   align-items: center; /* Centra horizontalmente */
+  //   text-align: center; /* Alinea el texto al centro */
+  //   height: 20%; /* Asegura que ocupe todo el espacio disponible */
+
+  //   padding: 2px; /* Espaciado interno opcional */
+  //   font-size: 12px; /* Ajusta el tamaño del texto */
+  //   margin-top: 5rem;
+
+  //   &-span{
+  //     margin-top: 5rem;
+  //     font-size: 12px;
+  //   }
+  // }
+
   }
-}
 
+@media (max-width: 650px) {
+  .main{
+    background-color: #e4d582;  
+  }
 
-
-
-
-
-@media (max-width: 650px){
-
-  .nav{
+  .nav {
     display: grid;
     grid-template-columns: 35% clamp(1%, 10vw, 10%) 35%;
 
-    &-enlaces{
-      
-      &-enlace{
+    &-enlaces {
+      &-enlace {
         display: none;
       }
-    
     }
   }
 
-  .main{
+  .main {
     display: grid;
-    grid-template-rows: 85dvh 75dvh 80dvh; 
+    grid-template-rows: 85dvh 75dvh 80dvh;
     color: white;
 
     //background-color: #82c2ef;
-    
   }
-  
 
-  .inicio{
+  .inicio {
     display: grid;
     grid-template-rows: 40% 20% 40%;
-    
 
-    &-superior{
-    
+    &-superior {
     }
 
-    &-central{
-    
+    &-central {
     }
 
-    &-inferior{
-    
+    &-inferior {
     }
   }
-
+  
 }
 
-
-@media (max-width: 480px){
-
-  .nav{
+@media (max-width: 480px) {
+  .nav {
     display: grid;
     grid-template-columns: 35% 0% 35%;
 
-    &-logo{
-      
-      &-enlace{
-
-        &-img{
+    &-logo {
+      &-enlace {
+        &-img {
           height: 1.6rem;
           margin-top: 0.3rem;
         }
       }
     }
 
-    &-enlaces{
-      
-      &-enlace{
+    &-enlaces {
+      &-enlace {
         display: none;
       }
-    
     }
 
-    &-agendar{
-    
-      &-boton{
+    &-agendar {
+      &-boton {
         width: 7.3rem;
         height: 2.9rem;
         font-size: 1.1rem;
@@ -757,53 +877,45 @@
     }
   }
 
-  .main{
-    //background-color: #efdf82;
-    
+  .main {
+    background-color: $clr-base;
   }
 
-  .inicio{
-    
-    &-superior{
-      
-      &-titulo{
-      
+  .inicio {
+    &-superior {
+      &-titulo {
       }
 
-
-      &-span{
-        
-      }
-    }
-
-
-  }
-
-
-  .splide{
-    &__track{}
-
-    &__list{}
-
-    &__title{ }
-
-    &__slide{
-
-      &__container{
-      
-
-        &--has-video{
-
-        }
+      &-span {
       }
     }
   }
+  // SLIDER VERTICAL COMENTADO
+  // #main-slider {
+  //   width: 80%; /* Reduce el ancho en un 20% */
+  //   height: auto; /* Ajusta automáticamente el alto */
+  //   max-width: 80vw; /* Limita el ancho máximo al 80% del ancho de la pantalla */
+  //   max-height: 40vh; /* Limita el alto máximo al 80% de la altura de la pantalla */
+  //   object-fit: cover; /* Ajusta el contenido para que no se deforme */
+  // }
+  .carrusel {
+    &-img {
+      width: 14rem;
+      height: auto;
+      aspect-ratio: 9 / 16;
+      border-radius: 1rem;
+    }
+  }
 
+
+//   video {
+//     width: 80%; /* Reduce el ancho del video en un 20% */
+//     height: auto; /* Ajusta automáticamente el alto */
+//     max-width: 80vw; /* Limita el ancho máximo al 80% del ancho de la pantalla */
+//     max-height: 40vh; /* Limita el alto máximo al 80% de la altura de la pantalla */
+//     object-fit: cover; /* Ajusta el contenido para que no se deforme */
+//   }
 }
-
-
-
-
 
 // /* Aplica estilos a los controles del reproductor de video */
 // video::-webkit-media-controls {
@@ -815,22 +927,5 @@
 // video:hover::-webkit-media-controls {
 //   opacity: 0.3; /* Restaura la opacidad al 100% */
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // CONTROLES DE VIDEO
