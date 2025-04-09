@@ -452,6 +452,8 @@
     animation: scroll 25s linear infinite;
     -webkit-animation: scroll 25s linear infinite;
     width: calc(150px * 27);
+    cursor: pointer;
+    pointer-events: none;
 
     &-slide{
       width: 150px;
@@ -474,7 +476,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
+    
         & span{
           color: $clr-base;
         }

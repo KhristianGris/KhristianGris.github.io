@@ -2351,6 +2351,8 @@ html {
   animation: scroll 25s linear infinite;
   -webkit-animation: scroll 25s linear infinite;
   width: 4050px;
+  cursor: pointer;
+  pointer-events: none;
 }
 .client-slider-track-slide {
   width: 150px;
