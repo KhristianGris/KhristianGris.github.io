@@ -2036,7 +2036,7 @@ html {
 
 .body {
   color: wheat;
-  background-color: rgb(29, 26, 30);
+  background-color: #1a181b;
   max-width: 100%;
 }
 
@@ -2049,7 +2049,7 @@ html {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: rgb(29, 26, 30);
+  background-color: #1a181b;
 }
 .nav-logo {
   display: grid;
@@ -2375,7 +2375,7 @@ html {
   justify-content: center;
 }
 .client-slider-track-slide-client span {
-  color: rgb(29, 26, 30);
+  color: #1a181b;
 }
 
 @keyframes scroll {
@@ -2588,7 +2588,7 @@ html {
     font-size: 1.1rem;
   }
   .main {
-    background-color: rgb(29, 26, 30);
+    background-color: #1a181b;
   }
   .carrusel-img {
     width: 14rem;
