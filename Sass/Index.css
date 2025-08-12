@@ -2045,7 +2045,7 @@ html {
   grid-template-columns: 25% 50% 25%;
   grid-area: nav;
   width: 100%;
-  height: 5.65rem;
+  height: 7rem;
   position: sticky;
   top: 0;
   z-index: 50;
@@ -2089,8 +2089,8 @@ html {
   width: 8rem;
   height: 3rem;
   text-align: center;
-  border-radius: clamp(0.1rem, 50vw, 1.1rem);
-  border: 2px solid #F9B75F;
+  border-radius: clamp(0.1rem, 50vw, 0.9rem);
+  border: 1.8px solid #F9B75F;
   font-size: 1.1rem;
 }
 .nav-agendar-boton:hover {
@@ -2186,9 +2186,9 @@ html {
   height: 4rem;
   text-align: center;
   border-radius: clamp(0.1rem, 10vw, 1.1rem);
-  border: 2px solid #F2E8D7;
+  border: 0.9px solid #F9B75F;
   background: rgba(0, 0, 0, 0);
-  color: #F2E8D7;
+  color: #F9B75F;
   font-weight: 600;
 }
 .inicio-inferior-boton:hover {

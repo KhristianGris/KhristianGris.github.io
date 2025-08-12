@@ -23,10 +23,11 @@
   grid-template-columns: 25% 50% 25%;
   grid-area: nav;
   width: 100%;
-  height: 5.65rem;
+  height: 7rem;
   position: sticky;
   top: 0;
   z-index: 50;
+
 
   background-color: $clr-base;
 
@@ -81,8 +82,8 @@
       width: 8rem;
       height: 3rem;
       text-align: center;
-      border-radius: clamp(0.1rem, 50vw, 1.1rem);
-      border: 2px solid $clr-primary;
+      border-radius: clamp(0.1rem, 50vw, 0.9rem);
+      border: 1.8px solid $clr-primary;
       font-size: 1.1rem;
 
       &:hover {
@@ -195,9 +196,9 @@
       height: 4rem;
       text-align: center;
       border-radius: clamp(0.1rem, 10vw, 1.1rem);
-      border: 2px solid $clr-secondary;
+      border: 0.9px solid $clr-primary;
       background: #00000000;
-      color: $clr-secondary;
+      color: $clr-primary;
       font-weight: 600;
 
       &:hover {
