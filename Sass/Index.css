@@ -2036,7 +2036,7 @@ html {
 
 .body {
   color: wheat;
-  background-color: #1a181b;
+  background-color: rgb(19, 19, 20);
   max-width: 100%;
 }
 
@@ -2049,7 +2049,7 @@ html {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: #1a181b;
+  background-color: rgb(19, 19, 20);
 }
 .nav-logo {
   display: grid;
@@ -2185,7 +2185,7 @@ html {
   width: 11rem;
   height: 4rem;
   text-align: center;
-  border-radius: clamp(0.1rem, 50vw, 1.1rem);
+  border-radius: clamp(0.1rem, 10vw, 1.1rem);
   border: 2px solid #F2E8D7;
   background: rgba(0, 0, 0, 0);
   color: #F2E8D7;
@@ -2375,7 +2375,7 @@ html {
   justify-content: center;
 }
 .client-slider-track-slide-client span {
-  color: #1a181b;
+  color: rgb(19, 19, 20);
 }
 
 @keyframes scroll {
@@ -2588,7 +2588,7 @@ html {
     font-size: 1.1rem;
   }
   .main {
-    background-color: #1a181b;
+    background-color: rgb(19, 19, 20);
   }
   .carrusel-img {
     width: 14rem;
