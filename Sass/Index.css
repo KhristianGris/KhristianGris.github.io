@@ -2090,7 +2090,7 @@ html {
   height: 3rem;
   text-align: center;
   border-radius: clamp(0.1rem, 50vw, 0.9rem);
-  border: 1.8px solid #F9B75F;
+  border: 1.9px solid #F9B75F;
   font-size: 1.1rem;
 }
 .nav-agendar-boton:hover {
