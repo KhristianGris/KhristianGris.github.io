@@ -2105,7 +2105,7 @@ html {
 
 .main {
   display: grid;
-  grid-template-rows: 90dvh 95dvh 65dvh;
+  grid-template-rows: 90dvh 95dvh 80dvh;
   height: auto;
   overflow-x: hidden;
 }
@@ -2296,7 +2296,8 @@ html {
 
 .agendar {
   display: grid;
-  grid-template-rows: 40% 25% 35%;
+  grid-template-rows: 45% 20% 35%;
+  overflow: hidden;
 }
 .agendar-superior {
   display: grid;
@@ -2310,7 +2311,6 @@ html {
   display: grid;
   justify-content: center;
   align-items: start;
-  padding-top: 1rem;
 }
 .agendar-central-boton {
   display: flex;
@@ -2338,6 +2338,58 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.reviews-slider-track-slide-client {
+  height: 11rem;
+  width: 29rem;
+  border-radius: clamp(0.9rem, 50vw, 1.5rem);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 22% 78%;
+  background-color: #191919;
+  color: #F2E8D7;
+}
+.reviews-slider-track-slide-client-left {
+  height: 90%;
+  display: grid;
+  justify-content: center;
+  padding-top: 2.7rem;
+}
+.reviews-slider-track-slide-client-left-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.reviews-slider-track-slide-client-right {
+  height: 90%;
+  display: grid;
+  grid-template-rows: 20% 90%;
+}
+.reviews-slider-track-slide-client-right-nombre {
+  display: grid;
+  display: inline;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+  flex-direction: column;
+}
+.reviews-slider-track-slide-client-right-nombre span {
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+.reviews-slider-track-slide-client-right-review {
+  font-size: 0.8rem;
+  display: grid;
+  align-items: top;
+  font-weight: 380;
+  margin-right: 1.5rem;
+  justify-content: left;
 }
 
 .client-slider {

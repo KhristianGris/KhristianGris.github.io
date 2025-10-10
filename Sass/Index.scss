@@ -103,7 +103,7 @@
 
 .main {
   display: grid;
-  grid-template-rows: 90dvh 95dvh 65dvh;
+  grid-template-rows: 90dvh 95dvh 80dvh;
   height: auto;
   overflow-x: hidden;
 }
@@ -339,8 +339,9 @@
 // A G E N D A R
 .agendar {
   display: grid;
-  grid-template-rows: 40% 25% 35%;
-
+  grid-template-rows: 45% 20% 35%;
+  overflow: hidden;
+  
   //background: #b6e274;
 
   &-superior {
@@ -348,20 +349,20 @@
     justify-content: center;
     align-items: end;
 
-    //background: #c3c8bd7b;
+    //background: #7b7d787b;
 
     &-titulo {
       width: clamp(15rem, 50vw, 25rem);
     }
 
-    //background: #70716f;
+    //background: #82986d;
   }
 
   &-central {
     display: grid;
     justify-content: center;
     align-items: start;
-    padding-top: 1rem;
+    
 
     &-boton {
       display: flex;
@@ -398,6 +399,77 @@
     //background: #b3c1a3;
   }
 }
+
+// R E V I E W  C L I E N T  S L I D E R
+
+.reviews-slider-track-slide{
+  &-client{
+    height: 11rem;
+    width: 29rem;
+    border-radius: clamp(0.9rem, 50vw, 1.5rem);
+    //  padding: 5px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 22% 78%;
+    background-color: #191919;
+    color: $clr-secondary;
+
+
+    & span{
+      
+    }
+
+    &-left{
+      height: 90%;
+      //background-color: #df9f8a75;
+      display: grid;
+      justify-content: center;
+      padding-top: 2.7rem;
+
+      &-img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &-right{
+      height: 90%;
+      display: grid;
+      grid-template-rows: 20% 90%;
+      //background-color: #8dc57388;
+
+      &-nombre{
+        display: grid;
+        display: inline;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 5rem;
+        flex-direction: column;
+
+        & span{
+          font-size: 0.9rem;
+          font-weight: 300;
+          letter-spacing: 0.1rem;
+        }
+      }
+
+      &-review{
+        font-size: 0.8rem;
+        display: grid;
+        align-items: top;
+        font-weight: 380;
+        margin-right: 1.5rem;
+        justify-content: left;
+      }
+    }
+  }
+
+}
+
+
 
 // C L I E N T - I N F I N I T E  S L I D E R
 
