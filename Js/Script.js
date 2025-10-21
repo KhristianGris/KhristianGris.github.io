@@ -27,18 +27,22 @@ document.addEventListener('DOMContentLoaded', function () {
       1450: {
         perPage: 3, // Muestra 3 elementos por página en pantallas grandes
         gap: '1.5rem', // Espaciado ajustado para pantallas grandes
+        start: 1,
       },
       1300: {
         perPage: 2, // Muestra 2 elementos por página en pantallas medianas
         gap: '0rem', // Espaciado ajustado para pantallas medianas
+        start: 1,
       },
       850: {
         perPage: 1.5, // Muestra 2 elementos por página en pantallas medianas
         gap: '1.5rem', // Espaciado ajustado para pantallas medianas
+        start: 1,
       },
       650: {
         perPage: 1, // Muestra 1 elemento por página en pantallas pequeñas
         gap: '0.5rem', // Espaciado ajustado para pantallas pequeñas
+        start: 0,
       },
     },
   }).mount(window.splide.Extensions);

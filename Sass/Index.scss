@@ -72,7 +72,7 @@
     display: flex;
     align-items: center;
     justify-content: left;
-
+    
     //background-color: rgb(66, 144, 166);
 
     &-boton {
@@ -929,6 +929,7 @@
     grid-template-columns: 35% 0% 35%;
 
     &-logo {
+         
       &-enlace {
         &-img {
           height: 1.6rem;
